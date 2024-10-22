@@ -137,7 +137,7 @@ let m = await import(mod);
 assert(m.hasFlag === true);
 
 let realm = new ShadowRealm();
-let realmHasFlag = await r1.importValue(mod, "hasFlag");
+let realmHasFlag = await realm.importValue(mod, "hasFlag");
 assert(realmHasFlag === false);
 ```
 
